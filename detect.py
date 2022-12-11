@@ -207,7 +207,7 @@ if __name__ == '__main__':
 
     with torch.no_grad():
         if opt.update:  # update all models (to fix SourceChangeWarning)
-            for opt.weights in ['best.pt', 'yolov5s.pt', 'yolov5m.pt', 'yolov5l.pt', 'yolov5x.pt']:
+            for opt.weights in ["microalgae detection.pt", "microalgae detection-enhanced.pt", "coco detection.pt", 'yolov5s.pt', 'yolov5m.pt', 'yolov5l.pt', 'yolov5x.pt']:
                 detect()
                 strip_optimizer(opt.weights)
         else:
