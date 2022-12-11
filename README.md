@@ -6,7 +6,7 @@ Deploy [YOLO](https://github.com/ultralytics/yolov5/releases/tag/v5.0) detection
 
 # 线上体验
 
-直接访问 <https://share.streamlit.io/qifengle523/microalgae-yolov-streamlit/main/main.py>
+直接访问： <https://share.streamlit.io/qifengle523/microalgae-yolov-streamlit/blob/main/main.py>
 
 # 安装依赖
 
