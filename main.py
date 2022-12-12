@@ -64,9 +64,9 @@ if __name__ == '__main__':
     st.sidebar.image("logo.png")
     st.sidebar.title("设置")
     
-    st.subheader('')
+    #st.subheader('')
        
-    img_url = 'https://s1.ax1x.com/2022/12/11/zhpMLR.png'   # 设置网页背景图片
+    img_url = 'https://s1.ax1x.com/2022/12/12/z4AALF.png'   # 设置网页背景图片
     st.markdown('''<style>.css-fg4pbf{background-image:url(''' + img_url + ''');
     background-size:100% 100%;background-attachment:fixed; color:rgb(255 255 255);}</style>
     ''', unsafe_allow_html=True) 
@@ -82,7 +82,7 @@ if __name__ == '__main__':
     background: rgba(4, 72, 117, 0.9);
     outline: none;
     z-index: 999990;
-    display: block;}</style>''', unsafe_allow_html=True)   #设置网页顶部菜单栏样式
+    display: block;}</style>''', unsafe_allow_html=True)   #设置网页顶部菜单栏样式(高度设为0)
 
     st.markdown('''<style>.css-6qob1r.e1fqkh3o3{background:rgba(4, 72, 117, 0.9);}</style>''', unsafe_allow_html=True)  # 设置左侧边栏背景颜色为蓝色，跟页面背景颜色保持一致
 
@@ -91,6 +91,7 @@ if __name__ == '__main__':
     st.markdown('''<style>.css-1629p8f h1{color:rgb(255 255 255);scroll-margin-top: 1rem;}</style>''', unsafe_allow_html=True)  # 设置左侧边栏h1（即“设置”两字为白色）
 
     st.markdown('''<style>.css-fblp2m{color:rgb(255 255 255);}</style>''', unsafe_allow_html=True)  # 设置侧边栏左上角按钮颜色为白色
+    st.markdown('''<style>.css-1vq4p4l.e1fqkh3o4{padding-top: 1rem;}</style>''', unsafe_allow_html=True)  # 设置侧边栏padding-top
 
     st.markdown('''<style>.css-qri22k.egzxvld0{color:rgba(4, 72, 117, 0);}</style>''', unsafe_allow_html=True)  # 设置底部footer样式,使Made with隐身
     st.markdown('''<style>.css-1vbd788.egzxvld1{color:rgba(4, 72, 117, 0);}</style>''', unsafe_allow_html=True)  # 设置底部footer样式,使Streamlit隐身
@@ -98,9 +99,16 @@ if __name__ == '__main__':
     st.markdown('''<style>.css-629wbf.edgvbvh10{background:rgba(127, 127, 127, 0.3);}</style>''', unsafe_allow_html=True)  # 设置“开始检测”按钮背景颜色
     st.markdown('''<style>.css-1offfwp p{color:rgb(255 255 255);}</style>''', unsafe_allow_html=True)  # 设置“检测完成”样式为白色
     st.markdown('''<style>.st-c7{background: rgba(255, 255, 255, 0);}</style>''', unsafe_allow_html=True)  # 设置“tab”样式为透明
-    st.markdown('''<style>.css-1x8cf1d.edgvbvh10{background: rgba(127, 127, 127, 0.2);}</style>''', unsafe_allow_html=True)  # 设置“tab”样式为透明
-
-    # st.markdown('''<style>.css-s1jz82f8{text-align:center;}</style>''', unsafe_allow_html=True)
+    st.markdown('''<style>.st-du{background: rgba(255, 255, 255, 0);}</style>''', unsafe_allow_html=True)  # 设置“tab”样式为透明
+    st.markdown('''<style>.css-1x8cf1d.edgvbvh10{background: rgba(127, 127, 127, 0.2);}</style>''', unsafe_allow_html=True)  # 设置“保存结果”按钮背景颜色为半透明
+    st.markdown('''<style>.st-bx{background-color: rgba(255, 255, 255, 0);}</style>''', unsafe_allow_html=True)  # 设置“模型选择”和“检测方式”框样式为透明
+    st.markdown('''<style>.st-eg{background-color: rgba(255, 255, 255, 0);}</style>''', unsafe_allow_html=True)  # 设置“模型选择”和“检测方式”框样式为透明
+    st.markdown('''<style>.st-bs{color: rgb(255, 255, 255);}</style>''', unsafe_allow_html=True)  # 设置“tab”字体为白色
+    st.markdown('''<style>.st-co{color: rgb(255, 255, 255);}</style>''', unsafe_allow_html=True)  # 设置“模型选择”和“检测方式”框默认值字体为白色
+    st.markdown('''<style>.css-16kzsd9.e1wbw4rs0{color: rgb(255, 255, 255);background: rgba(4, 72, 117, 0.9);}</style>''', unsafe_allow_html=True)  # 设置“模型选择”和“检测方式”下拉框字体为白色，背景色与侧边栏背景色一致
+    st.markdown('''<style>.css-bn3168.e1wbw4rs0{color: rgb(255, 255, 255);background: rgba(4, 72, 117, 0.9);}</style>''', unsafe_allow_html=True)  # 设置“模型选择”和“检测方式”下拉框字体为白色，背景色与侧边栏背景色一致
+    st.markdown('''<style>.css-1dhfpht.exg6vvm15{color: rgb(255, 255, 255);background-color: rgba(255, 255, 255, 0.1);}</style>''', unsafe_allow_html=True)  # 设置“上传图片”和“上传视频”框样式为半透明
+    st.markdown('''<style>.css-slh8gl.ejtjsn20{background: rgba(255, 255, 255, 0);}</style>''', unsafe_allow_html=True)  # 设置“take photo”按钮样式为透明
 
     source1 = ("microalgae detection.pt", "microalgae detection-enhanced.pt", "coco detection.pt")
     source1_index = st.sidebar.selectbox("模型选择", ["microalgae detection.pt", "microalgae detection-enhanced.pt", "coco detection.pt"])
@@ -144,10 +152,32 @@ if __name__ == '__main__':
         expander = tab3.expander("点击展开")
         expander.write("3.数据增强")
         expander.write("由于微藻数据集的数据样本量不足以让模型在训练时达到收敛状态，为了提高模型的识别分类准确率，采用高斯模糊、水平翻转、垂直翻转、非等比例缩放、随机平移、\
-            透视变换、随机裁切等数据增强方式随机组合，对训练集进行扩充，最后共计获得15480张训练集样本。部分数据增强样本如图所示。")
+            透视变换、随机裁切等数据增强方式随机组合，对训练集进行扩充，共计获得15480张训练集样本，同时在训练过程中使用了Mosaic数据增强。部分数据增强样本如图所示。")
         expander.image("data_augmentation.png")
 
+    with  col3:
+        st.header("📒使用说明")
+        tab6, tab7 = st.tabs(["🖥️ About platform", "🙎 About me"])
+        # tab6.subheader("关于平台")
+        tab6.write("1.本平台为微藻智能化在线检测平台，可实现对纤维藻、小球藻、腔球藻、裸藻、多芒藻、异极藻、\
+            束球藻、微囊藻、舟形藻、盘星藻、席藻、栅藻、螺旋藻、针杆藻等14种微藻的实时高效智能化检测，并对检测结果进行保存；")
+        tab6.write("2.本平台的主要功能有：模型选择、置信度阈值、IoU阈值、检测方式；")
+        expander = tab6.expander("点击展开")
+        expander.write("3.模型选择：可选择的模型为microalgae detection.pt、microalgae detection-enhanced.pt，\
+            前者是基于YOLO v7检测算法训练微藻数据集得到，后者是基于改进YOLO v7(YOLO v7-MA)检测算法训练微藻数据集得到。\
+                另外，还有一个coco detection.pt模型可供选择，该模型通过训练COCO数据集得到，可供用户检测如人、小车、杯子等\
+                    常见目标，具体类别可参考COCO数据集官方介绍；")
+        expander.write("4.置信度阈值：用户可自主设置模型检测的置信度阈值，取值范围为0-1之间；")
+        expander.write("5.Iou阈值：用户可自主设置模型检测的非极大值抑制中的交并比阈值，取值范围为0-1之间；")
+        expander.write("6.检测方式：目前本平台提供的检测方式主要有：图片检测、视频检测和摄像头检测，其中，图片和视频支持批量上传检测，用户可以对检测结果进行下载保存；")
+        expander.write("7.本平台前后端均基于Streamlit开发，Streamlit是一个可以用于快速搭建Web应用的开源Python库，\
+            开发文档参见：https://docs.streamlit.io/ ")
+        expander.write("8.在本平台的开发过程中，也参考了xugaoxiang的GitHub仓库[https://github.com/xugaoxiang/yolov5-streamlit ]，特此申明并表示感谢；")
+        expander.write("9.本平台仅用作学术交流，已在Github上开源[https://github.com/qifengle523/microalgae-yolov-streamlit ]，可自由git，\
+            但不可用于任何盈利性用途，违者必究。喜欢的话可以给个star，谢谢~")
 
+        # tab7.subheader("关于作者")
+        tab7.write("Chigo，一枚就读于SHOU的理工男，主要研究方向为计算机视觉、目标检测。E-mail：chigowu@foxmail.com")
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--weights', nargs='+', type=str,
@@ -158,7 +188,8 @@ if __name__ == '__main__':
                         help='inference size (pixels)')
     parser.add_argument('--conf-thres', type=float,
                         default=values1, help='object confidence threshold')
-    parser.add_argument('--iou-thres', type=float, default=values2, help='IOU threshold for NMS')
+    parser.add_argument('--iou-thres', type=float,
+                        default=values2, help='IOU threshold for NMS')
     parser.add_argument('--device', default='',
                         help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
     parser.add_argument('--view-img', action='store_true',
@@ -188,110 +219,107 @@ if __name__ == '__main__':
     
     source = ("图片检测", "视频检测", "摄像头检测")
     source_index = st.sidebar.selectbox("检测方式", range(
-        len(source)), format_func=lambda x: source[x])
-
-    if source_index == 0:
-        uploaded_file = st.sidebar.file_uploader(
-            "上传图片", type=['png', 'jpeg', 'jpg'])
-        if uploaded_file is not None:
-            is_valid = True
-            with st.spinner(text='图片加载中...'):
-                # st.sidebar.image(uploaded_file)
-                picture = Image.open(uploaded_file)
-                picture = picture.save(f'data/images/{uploaded_file.name}')
-                opt.source = f'data/images/{uploaded_file.name}'
-        else:
-            is_valid = False
-    elif source_index == 1:
-        uploaded_file = st.sidebar.file_uploader("上传视频", type=['mp4'])
-        if uploaded_file is not None:
-            is_valid = True
-            with st.spinner(text='视频加载中...'):
-                # st.sidebar.video(uploaded_file)
-                with open(os.path.join("data", "videos", uploaded_file.name), "wb") as f:
-                    f.write(uploaded_file.getbuffer())
-                opt.source = f'data/videos/{uploaded_file.name}'
-        else:
-            is_valid = False
-
-    else:
-        uploaded_file = st.camera_input("打开摄像头")
-        # uploaded_file = st.sidebar.file_uploader("打开摄像头", type=['mp4'])
-        if uploaded_file is not None:
-            is_valid = True
-            with st.spinner(text='摄像头加载中...'):
-                picture = Image.open(uploaded_file)
-                picture = picture.save(f'data/images/{uploaded_file.name}')
-                opt.source = f'data/images/{uploaded_file.name}'
-        else:
-            is_valid = False
-
-    with  col3:
-        st.header("📒使用说明")
-        tab6, tab7 = st.tabs(["🖥️ About platform", "🙎 About me"])
-        # tab6.subheader("关于平台")
-        tab6.write("1.本平台为微藻智能化在线检测平台，可实现对纤维藻、小球藻、腔球藻、裸藻、多芒藻、异极藻、\
-            束球藻、微囊藻、舟形藻、盘星藻、席藻、栅藻、螺旋藻、针杆藻等14种微藻的实时高效智能化检测，并对检测结果进行保存；")
-        tab6.write("2.本平台的主要功能有：模型选择、置信度阈值、IoU阈值、检测方式；")
-        expander = tab6.expander("点击展开")
-        expander.write("3.模型选择：可选择的模型为microalgae detection.pt、microalgae detection-enhanced.pt，\
-            前者是基于YOLO v7检测算法训练微藻数据集得到，后者是基于改进YOLO v7(YOLO v7-MA)检测算法训练微藻数据集得到。\
-                另外，还有一个coco detection.pt模型可供选择，该模型通过训练COCO数据集得到，可供用户检测如人、小车、杯子等\
-                    常见目标，具体类别可参考COCO数据集官方介绍；")
-        expander.write("4.置信度阈值：用户可自主设置模型检测的置信度阈值，取值范围为0-1之间；")
-        expander.write("5.Iou阈值：用户可自主设置模型检测的非极大值抑制中的交并比阈值，取值范围为0-1之间；")
-        expander.write("6.检测方式：目前本平台提供的检测方式主要有：图片检测、视频检测和摄像头检测（摄像头检测目前仅支持PC端），用户可以对检测结果进行下载保存；")
-        expander.write("7.本平台前后端均基于Streamlit开发，Streamlit是一个可以用于快速搭建Web应用的开源Python库，\
-            开发文档参见：https://docs.streamlit.io/ ")
-        expander.write("8.在本台的开发过程中，也参考了xugaoxiang的GitHub仓库[https://github.com/xugaoxiang/yolov5-streamlit ]，特此申明并表示感谢；")
-        expander.write("9.本平台仅用作学术交流，已在Github上开源[https://github.com/qifengle523/microalgae-yolov-streamlit ]，可自由git，\
-            但不可用于任何盈利性用途，违者必究。喜欢的话可以给个star，谢谢~")
-
-        # tab7.subheader("关于作者")
-        tab7.write("Chigo，一枚就读于SHOU的理工男，主要研究方向为计算机视觉、目标检测。E-mail：chigowu@foxmail.com")
+        len(source)), format_func=lambda x: source[x], help="图片和视频支持批量上传检测")
 
     with col2:
         st.header("🗂️检测结果")
         tab4, tab5 = st.tabs(["🚀 Detection result", "🗺️ Original file"])
+        expander4 = tab4.expander("点击展开，查看其余检测结果")
+        expander5 = tab5.expander("点击展开，查看其余原图")
 
-
-        if is_valid:
-            print('valid')
+    if source_index == 0:
+        uploaded_files = st.sidebar.file_uploader(
+            "上传图片", type=['png', 'jpeg', 'jpg'], accept_multiple_files=True)
+        if uploaded_files is not None:
+            is_valid = True
             button = st.sidebar.button('开始检测')
-            if button:
-
-                detect(opt)
-
-                if source_index == 0:
-                    with st.spinner(text='Preparing Images'):
-                        for img in os.listdir(get_detection_folder()):
-                            tab4.image(str(Path(f'{get_detection_folder()}') / img))
-                            with open(str(Path(f'{get_detection_folder()}') / img), "rb") as file:
-                                tab4.download_button(label="保存结果", data=file, mime="image/jpg")
-                            tab5.image(uploaded_file)
-
-                        st.snow()
-                        st.success('检测完成！点击图片右上角，可全屏查看检测结果.', icon="✅")
-                elif source_index == 1:
-                    with st.spinner(text='Preparing Videos'):
-                        for vid in os.listdir(get_detection_folder()):
-                            tab4.video(str(Path(f'{get_detection_folder()}') / vid))
-                            with open(str(Path(f'{get_detection_folder()}') / vid), "rb") as file:
-                                tab4.download_button(label="保存结果", data=file, mime="video/mp4")
-                            tab5.video(uploaded_file)
-
-                        st.balloons()
-                        st.success('检测完成', icon="✅")
-                else:
-                    with st.spinner(text='Preparing Images'):
-                        for img in os.listdir(get_detection_folder()):
-                            tab4.image(str(Path(f'{get_detection_folder()}') / img))
-                            with open(str(Path(f'{get_detection_folder()}') / img), "rb") as file:
-                                tab4.download_button(label="保存结果", data=file, mime="image/jpg")
-                            tab5.image(uploaded_file)
-
-                        st.snow()
-                        st.success('检测完成！点击图片右上角，可全屏查看检测结果.', icon="✅")
-
-
+            with st.spinner(text='图片加载中...'):
+                count = 0
+                for uploaded_file in uploaded_files:
+                    count += 1
+                    picture = Image.open(uploaded_file)
+                    picture = picture.save(f'data/images/{uploaded_file.name}')
+                    opt.source = f'data/images/{uploaded_file.name}'
+                    detect(opt)
+                    if button:    
+                        with st.spinner(text='Preparing Images'):
+                            for img in os.listdir(get_detection_folder()):
+                                if count == 1:
+                                    tab4.write('After detection: '+img)
+                                    tab4.image(str(Path(f'{get_detection_folder()}') / img))
+                                    with open(str(Path(f'{get_detection_folder()}') / img), "rb") as file:
+                                        tab4.download_button(label="保存结果", data=file, mime="image/jpg")
+                                    tab5.write('Before detection: '+img)
+                                    tab5.image(uploaded_file)
+                                else:
+                                    expander4.write('After detection: '+img)
+                                    expander4.image(str(Path(f'{get_detection_folder()}') / img))
+                                    with open(str(Path(f'{get_detection_folder()}') / img), "rb") as file:
+                                        expander4.download_button(label="保存结果", data=file, mime="image/jpg")
+                                    expander5.write('Before detection: '+img)
+                                    expander5.image(uploaded_file) 
+                            st.snow()
+                            #st.success('检测完成！点击图片右上角，可全屏查看检测结果.', icon="✅")
+        else:
+            is_valid = False
     
+    elif source_index == 1:
+        uploaded_files = st.sidebar.file_uploader("上传视频", type=['mp4'], accept_multiple_files=True)
+        if uploaded_files is not None:
+            is_valid = True
+            button = st.sidebar.button('开始检测')
+            with st.spinner(text='视频加载中...'):
+                count = 0
+                for uploaded_file in uploaded_files:
+                    count += 1
+                    with open(os.path.join("data", "videos", uploaded_file.name), "wb") as f:
+                        f.write(uploaded_file.getbuffer())
+                    opt.source = f'data/videos/{uploaded_file.name}'
+                    detect(opt)
+                    if button:
+                        with st.spinner(text='Preparing Videos'):
+                            for vid in os.listdir(get_detection_folder()):
+                                if count == 1:
+                                    tab4.write('After detection: '+vid)
+                                    tab4.video(str(Path(f'{get_detection_folder()}') / vid))
+                                    with open(str(Path(f'{get_detection_folder()}') / vid), "rb") as file:
+                                        tab4.download_button(label="保存结果", data=file, mime="video/mp4")
+                                    tab5.write('Before detection: '+vid)
+                                    tab5.video(uploaded_file)
+                                else:
+                                    expander4.write('After detection: '+vid)
+                                    expander4.video(str(Path(f'{get_detection_folder()}') / vid))
+                                    with open(str(Path(f'{get_detection_folder()}') / vid), "rb") as file:
+                                        expander4.download_button(label="保存结果", data=file, mime="video/mp4")
+                                    expander5.write('Before detection: '+vid)
+                                    expander5.video(uploaded_file)
+                            st.balloons()
+                            #st.success('检测完成', icon="✅")
+        else:
+            is_valid = False
+
+    else:
+        with st.spinner(text='正在检测摄像头...'):
+            uploaded_file = st.camera_input("打开摄像头")
+            if uploaded_file is not None:
+                is_valid = True
+                button = st.sidebar.button('开始检测')
+                picture = Image.open(uploaded_file)
+                picture = picture.save(f'data/images/{uploaded_file.name}')
+                opt.source = f'data/images/{uploaded_file.name}'
+                detect(opt)
+                if button:
+                    with st.spinner(text='Preparing Images'):
+                        for img in os.listdir(get_detection_folder()):
+                            tab4.image(str(Path(f'{get_detection_folder()}') / img))
+                            with open(str(Path(f'{get_detection_folder()}') / img), "rb") as file:
+                                tab4.download_button(label="保存结果", data=file, mime="image/jpg")
+                            tab5.image(uploaded_file)
+                    st.snow()
+                    st.success('检测完成！点击图片右上角，可全屏查看检测结果.', icon="✅")                
+            else:
+                is_valid = False
+
+
+                        
+  
