@@ -2,7 +2,7 @@
 
 ## 在线体验
 
-直接访问 <https://share.streamlit.io/qifengle523/microalgae-yolov-streamlit/main/main.py>
+直接访问: <https://qifengle523-microalgae-yolov-streamlit-main-gkij8s.streamlit.app/>
 
 __2022.12.12更新__
 
@@ -57,7 +57,9 @@ __2022.12.09__
 pip install -r requirements.txt
 ```
 
-如果有`GPU`的话，将`torch`替换成`gpu`版本可加速检测
+若在本地安装，请将`opencv-python-headless`改为`opencv-python`\
+如果本地或者服务器上有`GPU`配置，可将`torch`替换成`gpu`版本以加速检测\
+目前在Streamlit平台部署，暂不支持`gpu`版本的`torch`，直接按照`requirements.txt`默认安装即可
 
 ## 启动项目
 
@@ -75,7 +77,7 @@ streamlit run main.py
 
 ## 在线体验
 
-直接访问 <https://share.streamlit.io/qifengle523/microalgae-yolov-streamlit/main/main.py>
+直接访问: <https://qifengle523-microalgae-yolov-streamlit-main-gkij8s.streamlit.app/>
 
 ## References
 [1] <https://docs.streamlit.io/>\
