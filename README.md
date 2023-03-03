@@ -2,7 +2,18 @@
 
 ## 在线体验
 
-直接访问: <https://qifengle523-microalgae-yolov-streamlit-main-gkij8s.streamlit.app/>
+直接访问: <https://microalgaedetection.streamlit.app/>
+
+__2023.3.3更新__
+
+## 更新内容
+
+1.新增系统登陆、注册、退出等功能；\
+2.新增对14种微藻的形态学介绍。
+
+**登陆界面**
+
+![login page](data/images/login.png)
 
 __2022.12.12更新__
 
@@ -77,9 +88,10 @@ streamlit run main.py
 
 ## 在线体验
 
-直接访问: <https://qifengle523-microalgae-yolov-streamlit-main-gkij8s.streamlit.app/>
+直接访问: <https://microalgaedetection.streamlit.app/>
 
 ## References
 [1] <https://docs.streamlit.io/>\
 [2] <https://github.com/xugaoxiang/yolov5-streamlit>\
 [3] <https://xugaoxiang.com/2021/08/27/yolov5-streamlit/>
+[4] <https://github.com/GauriSP10/streamlit_login_auth_ui>
