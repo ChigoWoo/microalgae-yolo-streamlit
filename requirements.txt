@@ -1,6 +1,7 @@
 # pip install -r requirements.txt
 
 streamlit
+streamlit-authenticator
 
 # base ----------------------------------------
 matplotlib>=3.2.2
