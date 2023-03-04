@@ -2,6 +2,7 @@
 
 streamlit
 streamlit-authenticator
+streamlit-login-auth-ui
 
 # base ----------------------------------------
 matplotlib>=3.2.2
