@@ -1,5 +1,7 @@
 # pip install -r requirements.txt
 
+python==3.9.12
+
 streamlit
 streamlit-authenticator
 streamlit-login-auth-ui
