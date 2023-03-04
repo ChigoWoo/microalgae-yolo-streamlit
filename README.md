@@ -2,9 +2,9 @@
 
 ## 在线体验
 
-直接访问: <https://microalgaedetection.streamlit.app/>
+微藻智能化在线检测平台: <https://microalgaedetection.streamlit.app/>
 
-__2023.3.3更新__
+__2023.3.4更新__
 
 ## 更新内容
 
@@ -13,6 +13,10 @@ __2023.3.3更新__
 **登陆界面**
 
 ![login page](data/images/login.png)
+
+**退出界面**
+
+![logout page](data/images/logout.jpg)
 
 __2022.12.12更新__
 
@@ -92,5 +96,5 @@ streamlit run main.py
 ## References
 [1] <https://docs.streamlit.io/>\
 [2] <https://github.com/xugaoxiang/yolov5-streamlit>\
-[3] <https://xugaoxiang.com/2021/08/27/yolov5-streamlit/>
+[3] <https://xugaoxiang.com/2021/08/27/yolov5-streamlit/>\
 [4] <https://github.com/GauriSP10/streamlit_login_auth_ui>
