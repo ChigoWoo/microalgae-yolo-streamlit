@@ -1,10 +1,12 @@
 # pip install -r requirements.txt
 
+/home/appuser/venv/bin/python -m pip install --upgrade pip
+
 python==3.9.12
 
 streamlit
 streamlit-authenticator
-streamlit-login-auth-ui
+-i https://pypi.tuna.tsinghua.edu.cn/simple streamlit-login-auth-ui
 
 # base ----------------------------------------
 matplotlib>=3.2.2
